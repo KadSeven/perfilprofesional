@@ -179,3 +179,39 @@ form_register.addEventListener("submit", name_event =>{
     information.innerText = info;
     
 })
+
+// Fecha y ejercicio de array
+
+function load_page(){
+    document.getElementById("nombres").focus();
+    document.getElementById("apellidos").disabled=true;
+    // let day = new Date();
+    // console.log(date.getMinutes());
+    let date = new Date();
+    console.log(date.getMinutes());
+    for (let j=0; j<array_mul.length; j++){
+        console.log(array_mul[j].name);
+    }
+}
+
+function validate(){
+    let nombres = document.getElementById("nombres").value;
+    let nombres_style = document.getElementById("nombres");
+    if (nombres.length > 2){
+            nombres_style.border = "2px solid green";
+            document.getElementById("apellidos").disabled = false;
+            document.getElementById("apellidos").focus();
+            document.getElementById("nombres").value="";
+            alert(nombres.concat("Diaz"));
+    }
+}
+
+// function name_valor(){
+//     let nombres = document.getElementById("nombres").value;
+//     if (nombres.value.length >2){
+//         alert("nombre valido");
+//     }
+//     else{
+//         alert("Nombre invalido");
+//     }
+// }
